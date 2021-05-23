@@ -2,6 +2,10 @@ function printName(){
   var name = document.getElementById('name').value;
   document.getElementById('display').innerHTML = "Hello " + name;
 }
+function clear(){
+  document.getElementById('fahrenheit').value = '';
+  document.getElementById('celsius').value = '';
+}
 function converttoCelsius(){
   var fahrenheit = document.getElementById('fahrenheit').value;
   if(isNaN(fahrenheit))

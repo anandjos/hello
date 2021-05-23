@@ -14,10 +14,9 @@
     <form id="f_c_Converter" onsubmit="event.preventDefault()">
         <h1>Fahrenheit-Celsius converter</h1>
         <label>Fahrenheit</label>
-        <input placeholder="Enter value" id="fahrenheit" name="fahrenheit"></br>
+        <input placeholder="Enter value" id="fahrenheit" name="fahrenheit" onkeyup="converttoCelsius()"></br>
         <label>Celsius</label>
-        <input placeholder="Enter value" id="celsius" name="celsius" ></br>
-        <button onclick="convert()">Convert</button>
+        <input placeholder="Enter value" id="celsius" name="celsius" onkeyup="converttoFahrenheit()"></br>
     </form>
 </body>
 </html>
