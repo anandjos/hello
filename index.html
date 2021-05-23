@@ -11,5 +11,13 @@
         <button onclick="printName()">Submit</button>
     </form>
     <div id="display"></div>
+    <form id="f_to_cConverter" onsubmit="event.preventDefault()">
+        <h1>Fahrenheit to Celsius converter</h1>
+        <label>Fahrenheit</label>
+        <input placeholder="Enter value" id="fahrenheit" name="fahrenheit"></br>
+        <label>Celsius</label>
+        <input id="celsius" name="celsius" disabled></br>
+        <button onclick="converttoCelsius()">Convert</button>
+    </form>
 </body>
 </html>
