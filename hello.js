@@ -1,13 +1,10 @@
-function printName(){
-  var name = document.getElementById('name').value;
-  document.getElementById('display').innerHTML = "Hello " + name;
-}
-function clear(){
-  document.getElementById('fahrenheit').value = '';
-  document.getElementById('celsius').value = '';
-}
 function converttoCelsius(){
   var fahrenheit = document.getElementById('fahrenheit').value;
+  if(fahrenheit==='')
+  {
+    document.getElementById('celsius').value = '';
+    return;
+  }
   if(isNaN(fahrenheit))
   {
     alert('Enter valid value');
@@ -19,6 +16,11 @@ function converttoCelsius(){
 }
 function converttoFahrenheit(){
   var celsius = document.getElementById('celsius').value;
+  if(celsius==='')
+  {
+    document.getElementById('fahrenheit').value = '';
+    return;
+  }
   if(isNaN(celsius))
   {
     alert('Enter valid value');
@@ -27,12 +29,4 @@ function converttoFahrenheit(){
   var fahrenheit = 32 + 9/5*celsius;
   fahrenheit = fahrenheit.toFixed(2);
   document.getElementById('fahrenheit').value = fahrenheit;
-}
-function convert(){
-  if(document.getElementById('fahrenheit').value !== '')
-    converttoCelsius();
-  else if(document.getElementById('celsius').value !== '')
-    converttoFahrenheit();
-  else
-    alert('Enter one field');
 }
